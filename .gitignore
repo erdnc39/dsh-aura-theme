@@ -1,0 +1,4 @@
+# No build step: lib/client.js is committed as the loadable bundle.
+# Ignore anything a future toolchain might drop next to it.
+node_modules/
+*.log
