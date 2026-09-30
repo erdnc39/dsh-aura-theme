@@ -34,6 +34,8 @@ olarak boştur. Sayfa yüklenirken şunları yapar:
 | `--dsw-alias-bg-layer-1/2/3` | `#150f09` → `#1d150d` → `#261c11` |
 | `--dsw-alias-label-primary` | `#f8ede2` (sıcak kâğıt beyazı) |
 | `--dsw-alias-brand-primary` | `#ff8a1f` |
+| `--dsw-alias-button-info-fill` / `-hover` | `#ff8a1f` / `#ffa149` — **gönder butonu** (varsayılan `deepseek-400` mavi yerine) |
+| `--dsw-alias-label-deep-diving` / `-shimmer` | `#ffb066` / `#ff9d47` — **"Derin düşünme" satırı** (varsayılan mavi yerine) |
 | `--dsw-alias-border-l1..l4` | `#ff8a1f1f` → `#ffb06666` (her saç teli çizgide ember) |
 | `--dsw-specific-sidebar-fill` | `#100b07eb` (yarı saydam) |
 | `--dsw-specific-menu` | `#17110bf2` + `--dsw-menu-backdrop-filter: blur(26px)` |
