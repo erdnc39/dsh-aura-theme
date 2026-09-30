@@ -178,6 +178,11 @@ check("css keys every effect on [data-dsh-aura]", styleTags[0].textContent.inclu
 check("css carries the border beam", styleTags[0].textContent.includes("dshAura-borderBeam"));
 check("css carries the background beam", styleTags[0].textContent.includes("dshAura-bgBeam"));
 check("css carries frosted glass", styleTags[0].textContent.includes("[data-composer-card]") && styleTags[0].textContent.includes("backdrop-filter"));
+check("hexagon plate is inlined as a data URI", source.includes("--dsh-aura-plate:url(\"data:image/webp;base64,") && source.includes("var(--dsh-aura-plate,none)"));
+check("plate placeholder was substituted", !source.includes("@@AURA_PLATE@@"));
+check("plate layer is the bottom background with cover", source.includes("background-size:300% 100%,100% 100%,100% 100%,cover"));
+check("scrim layer keeps message copy readable", source.includes("linear-gradient(180deg,rgba(11,7,5,.50),rgba(11,7,5,.68))"));
+check("keyframes freeze the plate while the beam sweeps", source.includes("0%{background-position:0% 0,0 0,0 0,center}"));
 check("auto-activated the aura theme", themeState.preference === "aura", themeState.preference);
 check("root attribute set", rootAttrs.has("data-dsh-aura"));
 

@@ -51,9 +51,14 @@ durum (success/warn/error) renkleri tanımlıdır.
   Chromium'da gerçek animasyon; halka mesaj metnine, kaydırma çubuğuna ve
   yazma alanına hiç girmeyen boşlukta kalır. Ayrıca her zaman görünen
   `inset` sıcak saç teli çerçeve.
-- **Background beam** — sohbet kaydırıcısının (`[data-conversation-scroll]`)
-  **arka plan katmanı** olarak süpüren diyagonal ışık huzmesi + üstte sıcak
-  hale. Arka plan olduğu için içerik asla üstüne çıkmaz, kaydırma ile kaymaz.
+- **Background beam + altıgen plaka** — sohbet kaydırıcısının
+  (`[data-conversation-scroll]`) dört arka plan katmanı: en altta **altıgen
+  plaka** (`assets/hex-aura-plate.webp`, stylesheet'e gömülü data URI),
+  üstünde okunabilirliği koruyan koyu scrim, sıcak huzme ve en üstte süpüren
+  diyagonal ışık. Arka plan oldukları için içerik asla üstüne çıkmaz, kaydırma
+  ile kaymaz; **yalnızca ışık katmanı hareket eder** (keyframe'ler diğer üç
+  katmanı sabit tutar). Plaka yüklenemezse `var(--dsh-aura-plate,none)` ile
+  düşer, ışın çalışmaya devam eder.
 - **Buzlu cam** — yazma alanı kartı (`[data-composer-card]`) gerçek
   `backdrop-filter: blur(20px) saturate(160%)` ile ışının üstünde cam gibi
   durur; kenar çubuğu (`[data-slot="sidebar"]`) 24px bulanıklık; açılan
