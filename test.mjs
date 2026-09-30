@@ -181,8 +181,11 @@ check("css carries frosted glass", styleTags[0].textContent.includes("[data-comp
 check("hexagon plate is inlined as a data URI", source.includes("--dsh-aura-plate:url(\"data:image/webp;base64,") && source.includes("var(--dsh-aura-plate,none)"));
 check("plate placeholder was substituted", !source.includes("@@AURA_PLATE@@"));
 check("plate layer is the bottom background with cover", source.includes("background-size:300% 100%,100% 100%,100% 100%,cover"));
-check("scrim layer keeps message copy readable", source.includes("linear-gradient(180deg,rgba(11,7,5,.50),rgba(11,7,5,.68))"));
+check("scrim layer keeps message copy readable", source.includes("linear-gradient(180deg,rgba(11,7,5,.62),rgba(11,7,5,.80))"));
 check("keyframes freeze the plate while the beam sweeps", source.includes("0%{background-position:0% 0,0 0,0 0,center}"));
+check("copy sits on a framed frosted-glass panel", source.includes("[data-dsh-aura] [data-chat-flow]:not([data-step-process-content]):not(:empty){") && source.includes("backdrop-filter:blur(18px) saturate(145%)"));
+check("the nested step process is excluded from the panel", source.includes("]:not([data-step-process-content]):not(:empty){"));
+check("chat frame hairline is visible over the plate", source.includes("box-shadow:inset 0 0 0 .5px rgba(255,138,31,.30)"));
 check("auto-activated the aura theme", themeState.preference === "aura", themeState.preference);
 check("root attribute set", rootAttrs.has("data-dsh-aura"));
 

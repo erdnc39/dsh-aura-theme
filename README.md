@@ -59,6 +59,13 @@ durum (success/warn/error) renkleri tanımlıdır.
   ile kaymaz; **yalnızca ışık katmanı hareket eder** (keyframe'ler diğer üç
   katmanı sabit tutar). Plaka yüklenemezse `var(--dsh-aura-plate,none)` ile
   düşer, ışın çalışmaya devam eder.
+- **Mesaj paneli** — yazıların oturduğu alan (`[data-chat-flow]`) 20px
+  yuvarlaklı, sıcak saç teli çerçeveli gerçek bir **buzlu cam levhadır**:
+  `backdrop-filter: blur(18px) saturate(145%)` + yarı saydam zemin + yumuşak
+  gölge. Plaka ve ışın arkada kalır, metin camın üstünde okunur. Katlanır adım
+  süreçleri (`[data-step-process-content]`) bilinçli olarak çerçeve dışında
+  bırakılır; pencere çerçevesinin (`[data-conversation-content]`) saç teli
+  çizgisi de plaka üzerinde görebilsin diye `rgba(255,138,31,.30)`a çekildi.
 - **Buzlu cam** — yazma alanı kartı (`[data-composer-card]`) gerçek
   `backdrop-filter: blur(20px) saturate(160%)` ile ışının üstünde cam gibi
   durur; kenar çubuğu (`[data-slot="sidebar"]`) 24px bulanıklık; açılan
